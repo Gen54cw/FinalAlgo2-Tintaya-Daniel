@@ -10,5 +10,17 @@ package modelo;
  * @author tintaya
  */
 public class VentaArreglo {
+    private int indice;
+    private Venta[] venta;
+
+    public VentaArreglo(int tamano) {
+        this.venta = new Venta[tamano];
+        this.indice=0;
+    }
+    public boolean registrarVenta(Venta v){
+        boolean result = false;
+        
+        return result;        
+    }
     
 }
