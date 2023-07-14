@@ -22,5 +22,8 @@ public class VentaArreglo {
         
         return result;        
     }
-    
+    public void agregar(Venta v){
+        this.venta[this.indice] = v;
+        this.indice++;
+    }
 }
