@@ -51,6 +51,10 @@ public class Producto {
         return marca;
     }
 
+    public Categoria getCat() {
+        return cat;
+    }
+    
     public void setMarca(String marca) {
         this.marca = marca;
     }

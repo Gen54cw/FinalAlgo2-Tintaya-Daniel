@@ -13,9 +13,12 @@ public class Tienda {
     private String nombre;
     private String ruc;
     private String direccion;
-    private Categoria categoria;
+    private Categoria[] categoria;
     private Producto[] producto;
     private Persona[] persona;
+    private int indiceCategoria=0;
+    private int indiceProducto=0;
+    private int indicePersona=0;
 
     public Tienda(String nombre, String ruc, String direccion, Categoria categoria, Producto producto, Persona persona) {
         this.nombre = nombre;
@@ -47,18 +50,28 @@ public class Tienda {
         this.direccion = direccion;
     }
     public void agregarCliente(Cliente c){
+        this.persona[this.indicePersona] = new Persona(c.getNombre(),c.getPaterno(),c.getMaterno(),c.getNacimiento(), c.getNumDocumento());
+        this.persona[this.indicePersona].setCliente(c);
+        this.indicePersona++;
         
     }
     public void agregarCategoria(Categoria cat){
-        
+        this.categoria[this.indiceCategoria] = new Categoria(cat.getNombre(),cat.isDisponible());
+        this.indiceCategoria++;
     }
     public void agregarProducto(Producto p){
-        
+        this.producto[this.indiceProducto] = new Producto(p.getPrecio(), p.getNombre(),p.getStock(), p.getMarca());
+        this.indiceProducto++;
     }
     public Producto buscarProductoPorCategoria(Categoria cat){
-        Producto p = null;
-        
-        return p;
+        Producto resultado = null;
+        for(Producto p:this.producto){
+            if(p.getCat().equals(cat)){
+                resultado = p;
+                break;
+            }
+        }
+        return resultado;        
     }
     public Producto buscarProductoPorNombre(String nombre){
         Producto resultado = null;
