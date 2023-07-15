@@ -17,6 +17,8 @@ public class Persona {
     private String materno;
     private Date nacimiento;
     private String numDocumento;
+    Trabajador trabajador;
+    private Cliente cliente;
 
     public Persona(String nombre, String paterno, String materno, Date nacimiento, String numDocumento) {
         this.nombre = nombre;

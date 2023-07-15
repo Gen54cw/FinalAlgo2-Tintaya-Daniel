@@ -14,7 +14,7 @@ public class Tienda {
     private String ruc;
     private String direccion;
     private Categoria categoria;
-    private Producto producto;
+    private Producto[] producto;
     private Persona[] persona;
 
     public Tienda(String nombre, String ruc, String direccion, Categoria categoria, Producto producto, Persona persona) {
@@ -61,13 +61,23 @@ public class Tienda {
         return p;
     }
     public Producto buscarProductoPorNombre(String nombre){
-        Producto p = null;
-        
-        return p;       
+        Producto resultado = null;
+        for(Producto p:this.producto){
+            if(p.getNombre().equalsIgnoreCase(nombre)){
+                resultado = p;
+                break;
+            }
+        }
+        return resultado;       
     }
     public Persona autenticar(String email,String password){
-        Persona per = null;
-        
-        return per;
+        Persona resultado = null;
+        for(Persona p: this.persona){
+            if(p.trabajador.ingresar(email, password)){
+                resultado=p;
+                break;
+            }
+        }
+        return resultado;
     }
 }

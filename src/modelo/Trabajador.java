@@ -38,17 +38,21 @@ public class Trabajador extends Persona{
     }
     public boolean ingresar(String email, String password){
         boolean result = false;
-        
+        if(this.email.equals(email)&&this.password.equals(password)){
+            result = true;
+        }        
         return result;
     }
     public boolean salir(){
         boolean result = false;
-        
+        if(result!=false){
+            System.exit(0);
+        }
         return result;        
     }
     public boolean crearVenta(Cliente c){
         boolean result = false;
-        
+
         return result;
     }
 }
