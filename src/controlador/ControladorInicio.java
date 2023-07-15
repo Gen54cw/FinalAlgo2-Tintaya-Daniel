@@ -36,10 +36,22 @@ public class ControladorInicio {
                 if(p!=null){
                     JOptionPane.showMessageDialog(vista, p);
                 }else{
-                    JOptionPane.showMessageDialog(vista, "Credencial invalida");
+                    JOptionPane.showMessageDialog(vista, " invalido");
                 }
+                limpiarControles();
             }
         });
      }
+    public void iniciar(){
+        this.vista.setLocationRelativeTo(null);
+        limpiarControles();
+        this.vista.setVisible(true);
+    }
+    
+    public void limpiarControles(){
+        vista.txtContrasena.setText("");
+        vista.txtEmail.setText("");
+        
+    }
      
 }

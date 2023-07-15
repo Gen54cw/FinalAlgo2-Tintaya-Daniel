@@ -16,16 +16,23 @@ public class Tienda {
     private Categoria[] categoria;
     private Producto[] producto;
     private Persona[] persona;
-    private int indiceCategoria=0;
-    private int indiceProducto=0;
-    private int indicePersona=0;
+    private int indiceCategoria;
+    private int indiceProducto;
+    private int indicePersona;
 
     public Tienda(String nombre, String ruc, String direccion, Categoria categoria, Producto producto, Persona persona) {
         this.nombre = nombre;
         this.ruc = ruc;
         this.direccion = direccion;
     }
-
+    public Tienda(int tamanoPersona,int tamanoProducto, int tamanoCategoria){
+        this.categoria = new Categoria[tamanoCategoria];
+        this.indiceCategoria=0;
+        this.persona = new Persona[tamanoPersona];
+        this.indicePersona=0;
+        this.producto = new Producto[tamanoProducto];
+        this.indiceProducto=0;
+    }
     public Categoria[] getCategoria() {
         return categoria;
     }
@@ -76,6 +83,12 @@ public class Tienda {
     public void agregarCliente(Cliente c){
         this.persona[this.indicePersona] = new Persona(c.getNombre(),c.getPaterno(),c.getMaterno(),c.getNacimiento(), c.getNumDocumento());
         this.persona[this.indicePersona].setCliente(c);
+        this.indicePersona++;
+        
+    }
+        public void agregarTrabajador(Trabajador t){
+        this.persona[this.indicePersona] = new Persona(t.getNombre(),t.getPaterno(),t.getMaterno(),t.getNacimiento(), t.getNumDocumento());
+        this.persona[this.indicePersona].setTrabajador(t);
         this.indicePersona++;
         
     }
