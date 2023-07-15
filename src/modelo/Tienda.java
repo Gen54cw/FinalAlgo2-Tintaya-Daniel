@@ -26,6 +26,30 @@ public class Tienda {
         this.direccion = direccion;
     }
 
+    public Categoria[] getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria[] categoria) {
+        this.categoria = categoria;
+    }
+
+    public Producto[] getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto[] producto) {
+        this.producto = producto;
+    }
+
+    public Persona[] getPersona() {
+        return persona;
+    }
+
+    public void setPersona(Persona[] persona) {
+        this.persona = persona;
+    }
+
     public String getNombre() {
         return nombre;
     }

@@ -34,13 +34,9 @@ public class Categoria {
         this.disponible = disponible;
     }
     public boolean habilitar(){
-        boolean result = false;
-        
-        return result;        
+        return this.disponible=true;        
     }
     public boolean deshabilitar(){
-        boolean result = false;
-        
-        return result;        
+        return this.disponible=false;        
     }
 }

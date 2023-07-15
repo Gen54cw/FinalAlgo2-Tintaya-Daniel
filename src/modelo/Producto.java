@@ -60,12 +60,15 @@ public class Producto {
     }
     public boolean vender(int cantidad){
         boolean result = false;
-        
+        if(this.stock>=cantidad){
+
+            result=true;
+        }
         return result;        
     }
     public boolean reponer(int cantidad){
         boolean result = false;
-        
+        this.stock+=cantidad;
         return result;        
     }
 }

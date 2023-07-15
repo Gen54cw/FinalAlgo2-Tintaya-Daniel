@@ -38,7 +38,7 @@ public class Venta {
         this.total = total;
     }
     public void agregarProducto(Producto c){
-        
+
     }
     public boolean eliminarProducto(Producto p, int cantidad){
         boolean result = false;
