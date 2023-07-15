@@ -19,10 +19,14 @@ import vista.frmInicio;
 public class App {
     public static void main(String[] args){
         frmInicio fInicio = new frmInicio();
-        configuracion.Datos.tienda.agregarTrabajador(new Trabajador("123","daniel54","Daniel","Tintaya","Avila",new Date(12, 5,2000),"1354"));
-        configuracion.Datos.tienda.agregarTrabajador(new Trabajador("123","juan54","Juan","Tintaya","Avila",new Date(12, 5,2000),"1354"));
-        configuracion.Datos.tienda.agregarTrabajador(new Trabajador("123","david54","David","Tintaya","Avila",new Date(12, 5,2000),"1354"));
-        librerias.SerializadoraGen.serializar("info", tienda);
+//        configuracion.Datos.tienda.agregarTrabajador(new Trabajador("123","daniel54","Daniel","Tintaya","Avila",new Date(12, 5,2000),"1354"));
+  //      configuracion.Datos.tienda.agregarTrabajador(new Trabajador("123","juan54","Juan","Tintaya","Avila",new Date(12, 5,2000),"1354"));
+    //    configuracion.Datos.tienda.agregarTrabajador(new Trabajador("123","david54","David","Tintaya","Avila",new Date(12, 5,2000),"1354"));
+        try {
+        configuracion.Datos.tienda = (Tienda)librerias.SerializadoraGen.deserializar("info");
+        } catch (Exception e){
+
+        }
         ControladorInicio controlador = new ControladorInicio(configuracion.Datos.tienda, fInicio);
         controlador.iniciar();
     }
