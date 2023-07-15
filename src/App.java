@@ -1,6 +1,8 @@
 
+import static configuracion.Datos.tienda;
 import controlador.ControladorInicio;
 import java.util.Date;
+import modelo.Tienda;
 import modelo.Trabajador;
 import vista.frmInicio;
 
@@ -17,7 +19,10 @@ import vista.frmInicio;
 public class App {
     public static void main(String[] args){
         frmInicio fInicio = new frmInicio();
-        configuracion.Datos.tienda.agregarTrabajador(new Trabajador("123","gen54","Daniel","Tintaya","Avila",new Date(12, 5,2000),"1354"));
+        configuracion.Datos.tienda.agregarTrabajador(new Trabajador("123","daniel54","Daniel","Tintaya","Avila",new Date(12, 5,2000),"1354"));
+        configuracion.Datos.tienda.agregarTrabajador(new Trabajador("123","juan54","Juan","Tintaya","Avila",new Date(12, 5,2000),"1354"));
+        configuracion.Datos.tienda.agregarTrabajador(new Trabajador("123","david54","David","Tintaya","Avila",new Date(12, 5,2000),"1354"));
+        librerias.SerializadoraGen.serializar("info", tienda);
         ControladorInicio controlador = new ControladorInicio(configuracion.Datos.tienda, fInicio);
         controlador.iniciar();
     }

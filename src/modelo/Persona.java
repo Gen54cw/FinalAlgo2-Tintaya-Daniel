@@ -5,13 +5,14 @@
  */
 package modelo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  *
  * @author tintaya
  */
-public class Persona {
+public class Persona implements Serializable{
     private String nombre;
     private String paterno;
     private String materno;
