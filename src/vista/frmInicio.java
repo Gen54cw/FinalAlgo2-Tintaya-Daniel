@@ -9,12 +9,12 @@ package vista;
  *
  * @author tintaya
  */
-public class Inicio extends javax.swing.JFrame {
+public class frmInicio extends javax.swing.JFrame {
 
     /**
      * Creates new form Inicio
      */
-    public Inicio() {
+    public frmInicio() {
         initComponents();
     }
 
@@ -147,20 +147,21 @@ public class Inicio extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Inicio().setVisible(true);
+                new frmInicio().setVisible(true);
             }
         });
     }
@@ -169,12 +170,12 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel Botones;
     private javax.swing.JPanel Texto;
     private javax.swing.JPanel Titulo;
-    private javax.swing.JButton btnIngresar;
-    private javax.swing.JButton btnSalir;
+    public javax.swing.JButton btnIngresar;
+    public javax.swing.JButton btnSalir;
     private javax.swing.JLabel lblContrasena;
     private javax.swing.JLabel lblEmail;
-    private javax.swing.JPasswordField txtContrasena;
-    private javax.swing.JTextField txtEmail;
+    public javax.swing.JPasswordField txtContrasena;
+    public javax.swing.JTextField txtEmail;
     private javax.swing.JLabel txtTitulo;
     // End of variables declaration//GEN-END:variables
 }
